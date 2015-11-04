@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    
+    
+    
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    <script type="application/javascript" src="js/init-app.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="xdk/ad/jqm_subpage.js"></script>
+    <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5SvbgATyskI3PsartoPB7twUIyRpNd1g&amp;sensor=true"></script>
+    <script type="application/javascript" src="google_maps/google_maps.js"></script>
+    <script type="application/javascript" src="lib/underscore.min.js"></script>
+    <script type="application/javascript" src="lib/backbone.js"></script>
+    <script type="application/javascript" src="lib/Backbone.ModelBinder.min.js"></script>
+    <script type="application/javascript" src="xdk/ad/backbone_support.js"></script>
+    <script type="application/javascript" src="xdk/ad/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="application/javascript" src="xdk/services/service-credentials.js"></script>
+    <script type="application/javascript" src="xdk/services/service-methods.js"></script>
+    <script type="application/javascript" src="xdk/ad/ad_events_data.js"></script>
+    <script type="application/javascript" src="js/index_init_services.js"></script>
+    <script type="application/javascript" src="xdk/ad/index_setup_services.js"></script>
+    <script type="application/javascript" src="xdk/ad/jqm_events_data.js"></script>
+    <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_1 header-bg" data-uib="jquery_mobile/header" data-ver="0">
+          <h1>Verizon</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_75_47">
+          <div class="table-thing with-label widget uib_w_2 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+            <label class="narrow-control label-inline" for="txtcid">Customer ID</label>
+            <input class="wide-control" id="txtcid" placeholder="Customer ID" type="text">
+          </div>
+
+          <div class="table-thing with-label widget uib_w_7 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+            <label class="narrow-control label-inline" for="txtpwd">Password....</label>
+            <input class="wide-control" placeholder="Password" type="password" id="txtpwd">
+          </div><a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnproceed" data-theme="a">Proceed</a><a class="widget uib_w_4 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button"
+          data-theme="btn-default" id="btnexit">Exit</a>
+        </div>
+      </div>
+    </div>
+    <div class="upage" id="Details" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_8" data-uib="jquery_mobile/header" data-ver="0">
+          <h1>Working</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_36_18">
+          <div class="widget uib_w_9 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8"></div>
+        </div>
+      </div>
+    </div>
+    <div class="upage" id="Ticket" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_10" data-uib="jquery_mobile/header" data-ver="0">
+          <h1>Ticket Details</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_58_10">
+          <!--<div class="widget uib_w_2 ui-content no_wrap d-margins outset-margin" data-uib="jquery_mobile/listview" data-ver="0" id="lstopt">
+            <ul data-role="listview" data-autodividers="true" data-divider-theme="a" id="lst">
+
+            </ul>
+          </div>-->
+          <div data-role="collapsible-set" class="no_wrap widget uib_w_3 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus">
+            <div data-role="collapsible" class="no_wrap widget uib_w_4" data-uib="jquery_mobile/collapsible" data-ver="0" id="exstkt">
+              <h4>Existing Ticket</h4>
+              <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="table-thing with-label no_wrap widget uib_w_6 d-margins" data-uib="jquery_mobile/radio_button_group" data-ver="0">
+                    <label class="narrow-control"></label>
+                    <fieldset data-role="controlgroup" class="widget-container wide-control uib-jqm-flex" data-child-name="jqm-radio-group-0" id="fd">
+                      <div class="ui-radio widget uib_w_7" data-uib="jquery_mobile/radio_button" data-ver="0" id="divtkt1">
+                        <label id="lbltkt1">T098723
+                          <input type="radio" name="jqm-radio-group-0" value="t1" id="t1">
+                        </label>
+                      </div>
+                      <div class="ui-radio widget uib_w_8" data-uib="jquery_mobile/radio_button" data-ver="0" id="divtkt2">
+                        <label id="lbltkt2">T876234
+                          <input type="radio" name="jqm-radio-group-0" value="t2" id="t2">
+                        </label>
+                      </div>
+                      <div class="ui-radio widget uib_w_9" data-uib="jquery_mobile/radio_button" data-ver="0" id="divtkt3">
+                        <label id="lbltkt3">T253098
+                          <input type="radio" name="jqm-radio-group-0" value="t3" id="t3">
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <a class="widget uib_w_15 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnpcd">Proceed</a><span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+            <div data-role="collapsible" class="no_wrap widget uib_w_5" data-uib="jquery_mobile/collapsible" data-ver="0">
+              <h4>New Ticket</h4>
+              <div class="col uib_col_2 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="table-thing with-label widget uib_w_10 d-margins label" data-uib="jquery_mobile/select" data-ver="0">
+                    <label class="narrow-control label-top-left">Trouble Type</label>
+                    <div data-role="fieldgroup" class+="" "wide-control"="">
+                      <select id="ddltrbltype" name="Trouble">
+                        <option>FIOS TV</option>
+                        <option>FIOS Internet</option>
+                        <option>Wiring Issue</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="table-thing with-label widget uib_w_12 d-margins label rest-of-height" data-uib="jquery_mobile/textarea" data-ver="0">
+                    <label class="narrow-control" for="txtdesc"></label>
+                    <textarea class="wide-control" placeholder="Trouble Description..." rows="4" wrap="soft" id="txtdesc"></textarea>
+                  </div><a class="widget uib_w_16 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btncrttkt" href="#">Create Ticket</a>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnext">Exit</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="upage" id="Maps" data-role="page">
+      <div class="upage-outer">
+        <div class="upage-outer">
+          <div data-role="header" class="container-group inner-element uib_w_1" data-uib="jquery_mobile/header" data-ver="0">
+            <h1>Current Location</h1>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"></div>
+            <div class="widget-container content-area horiz-area wrapping-col right"></div>
+          </div>
+          <div class="upage-content ac0 content-area vertical-col" id="page_66_26">
+            <div id="googleMap" style="width:100%;height:450px;"></div>
+
+            <div data-role="collapsible" class="no_wrap widget uib_w_4" data-uib="jquery_mobile/collapsible" data-ver="0" data-collapsed="false">
+              <h4>Proposed Technicians...</h4>
+              <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+
+                  <div class="widget uib_w_6 widget-container content-area vertical-col uib-card d-margins section-dimension-6 cpad-0 cardbg1" data-uib="layout/card" data-ver="0" id="crd1">
+                    <div class="widget uib_w_7 d-margins cardhead" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p>arriving in 23 mins</p>
+                      </div>
+                    </div>
+
+                    <div class="widget uib_w_8 d-margins cardbody" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd1bdy">Chris Jordan</p>
+                      </div>
+                    </div>
+                    <div class="widget uib_w_10 d-margins cardhead" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd1ftr">Review Rating : 4.5</p>
+                      </div>
+                    </div>
+                  </div><span class="uib_shim"></span>
+
+                  <div class="widget uib_w_6 widget-container content-area vertical-col uib-card d-margins section-dimension-6 cpad-0 cardbg2" data-uib="layout/card" data-ver="0" id="crd2">
+                    <div class="widget uib_w_7 d-margins cardhead" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd2hdr">arriving in 23 mins</p>
+                      </div>
+                    </div>
+
+                    <div class="widget uib_w_8 d-margins cardbody" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd2bdy">John Carter</p>
+                      </div>
+                    </div>
+                    <div class="widget uib_w_11 d-margins cardhead" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd2ftr">Review Rating : 4.25</p>
+                      </div>
+                    </div>
+                  </div><span class="uib_shim"></span>
+
+                  <div class="widget uib_w_6 widget-container content-area vertical-col uib-card d-margins section-dimension-6 cpad-0 cardbg1" data-uib="layout/card" data-ver="0" id="crd3">
+                    <div class="widget uib_w_7 d-margins cardhead" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd3hdr">arriving in 31 mins</p>
+                      </div>
+                    </div>
+
+                    <div class="widget uib_w_8 d-margins cardbody" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd3bdy">Kone Tenon</p>
+                      </div>
+                    </div>
+                    <div class="widget uib_w_12 d-margins cardhead" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div>
+                        <p id="crd3ftr">Review Rating : 3.7</p>
+                      </div>
+                    </div>
+                  </div><span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+            <div data-role="collapsible" class="no_wrap widget uib_w_5" data-uib="jquery_mobile/collapsible" data-ver="0" data-collapsed="false">
+              <h4>Later Duedate</h4>
+              <div class="col uib_col_2 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+
+                  <a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnrqdd">Request Duedate</a><span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+            <a class="widget uib_w_2 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnmapback">Back</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      document.addEventListener("deviceready", function(){
+                    navigator.geolocation.getCurrentPosition(function(position){
+                        var image = new google.maps.MarkerImage("house.png");
+                        var tech = new google.maps.MarkerImage("tech.png");
+                                       
+                    var mapProp = {center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude), zoom:13, mapTypeId:google.maps.MapTypeId.ROADMAP};
+                    var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                        var latarr = new Array(17.472751,17.457099,17.451566,17.444546,17.434941,17.443276);
+                        var langarr = new Array(78.364285,78.360889,78.379336,78.386063,78.386603,78.354400);
+                        var markerstr = new String("");
+                        var index;
+                        
+                        for(index = 0; index < latarr.length;index++){
+                            if(index === 0){
+                                var marker=new google.maps.Marker({position:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),icon:image});
+                    marker.setMap(map);
+                            }else{
+                                    //var position = new google.maps.LatLng(latarr[index],langarr[index]);
+                                var marker=new google.maps.Marker({position:new google.maps.LatLng(latarr[index],langarr[index]),icon:tech});
+                    marker.setMap(map);
+                                    }
+                            
+                        }
+                        
+                    //var marker=new google.maps.Marker({position:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),icon:image});
+                    //marker.setMap(map);
+                    }, function(error){
+                        if(error.code == PositionError.PERMISSION_DENIED)
+                        {
+                            alert("App doesn't have permission to use GPS");
+                        }
+                        else if(error.code == PositionError.POSITION_UNAVAILABLE)
+                        {
+                            alert("No GPS device found");
+                        }
+                        else if(error.code == PositionError.TIMEOUT)
+                        {
+                            alert("Its taking too long find user location");
+                        }
+                        else
+                        {
+                            alert("An unknown error occured");
+                        }
+                    }, { maximumAge: 3000, timeout: 50000, enableHighAccuracy: true });
+                }, false);
+    </script>
+    <div class="upage vertical-col left" id="Duedate" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_1" data-uib="jquery_mobile/header" data-ver="0">
+          <h1>DueDate </h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_80_17">
+          <div class="widget uib_w_2 d-margins success" data-uib="media/text" data-ver="0">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div>
+              <p>Success!!!</p>
+            </div>
+          </div>
+          <div class="widget uib_w_3 d-margins msg message" data-uib="media/text" data-ver="0">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div>
+              <p>Your request for duedate submitted to Verizon Dispatch Team. You will get a call/mail back from us soon..</p>
+            </div>
+          </div><a class="widget uib_w_5 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnddback">Back</a>
+          <a class="widget uib_w_4 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnddexit">Exit</a>
+        </div>
+      </div>
+    </div>
+    <div class="upage vertical-col left" id="distance" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_1" data-uib="jquery_mobile/header" data-ver="0" id="divdist">
+          <h1>Technician Started...</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div id="googleMapDist" style="width:100%;height:450px;"></div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_40_24"><a class="widget uib_w_2 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnback">Back</a>
+          <a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnexit">Exit</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

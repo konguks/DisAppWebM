@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+    <link rel="stylesheet" type="text/css" href="css/Det_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    
+    
+    
+    <script src="xdk/init-dev.js"></script>
+    <script src="js/xml2json.js"></script>
+    <script src="js/jquery.soap.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+    <script type="application/javascript" src="js/Det_user_scripts.js"></script>
+    <script type="application/javascript" src="xdk/ad/jqm_subpage.js"></script>
+    <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage" data-role="page">
+
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_1" data-uib="jquery_mobile/header" data-ver="0" data-theme="a">
+          <h1>Details</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_58_10">
+          <!--<div class="widget uib_w_2 ui-content no_wrap d-margins outset-margin" data-uib="jquery_mobile/listview" data-ver="0" id="lstopt">
+            <ul data-role="listview" data-autodividers="true" data-divider-theme="a" id="lst">
+
+            </ul>
+          </div>-->
+          <div data-role="collapsible-set" class="no_wrap widget uib_w_3 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus">
+            <div data-role="collapsible" class="no_wrap widget uib_w_4" data-uib="jquery_mobile/collapsible" data-ver="0" id="exstkt">
+              <h4>Existing Ticket</h4>
+              <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="table-thing with-label no_wrap widget uib_w_6 d-margins" data-uib="jquery_mobile/radio_button_group" data-ver="0">
+                    <label class="narrow-control"></label>
+                    <fieldset data-role="controlgroup" class="widget-container wide-control uib-jqm-flex" data-child-name="jqm-radio-group-0" id="fd">
+                      <div class="ui-radio widget uib_w_7" data-uib="jquery_mobile/radio_button" data-ver="0">
+                        <label>T098723
+                          <input type="radio" name="jqm-radio-group-0">
+                        </label>
+                      </div>
+                      <div class="ui-radio widget uib_w_8" data-uib="jquery_mobile/radio_button" data-ver="0">
+                        <label>T876234
+                          <input type="radio" name="jqm-radio-group-0">
+                        </label>
+                      </div>
+                      <div class="ui-radio widget uib_w_9" data-uib="jquery_mobile/radio_button" data-ver="0">
+                        <label>T253098
+                          <input type="radio" name="jqm-radio-group-0">
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <a class="widget uib_w_15 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnpcd">Proceed</a><span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+            <div data-role="collapsible" class="no_wrap widget uib_w_5" data-uib="jquery_mobile/collapsible" data-ver="0">
+              <h4>New Ticket</h4>
+              <div class="col uib_col_2 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="table-thing with-label widget uib_w_10 d-margins label" data-uib="jquery_mobile/select" data-ver="0">
+                    <label class="narrow-control label-top-left">Trouble Type</label>
+                    <div data-role="fieldgroup" class+="" "wide-control"="">
+                      <select id="ddltrbltype" name="Trouble">
+                        <option>FIOS TV</option>
+                        <option>FIOS Internet</option>
+                        <option>Wiring Issue</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="table-thing with-label widget uib_w_12 d-margins label rest-of-height" data-uib="jquery_mobile/textarea" data-ver="0">
+                    <label class="narrow-control label-top-left">Trouble Description</label>
+                    <textarea class="wide-control" placeholder="Describe the issue.." rows="4" wrap="soft"></textarea>
+                  </div><a class="widget uib_w_16 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btncrttkt">Create Ticket</a>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnext">Exit</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

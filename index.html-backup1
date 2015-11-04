@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    
+    
+    
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    <script type="application/javascript" src="js/init-app.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="xdk/ad/jqm_subpage.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0">
+          <h2>Verizon</h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left">
+          <div class="table-thing widget uib_w_2 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-inline" for="txtcid">Customer ID</label>
+            <input class="wide-control form-control default" type="text" placeholder="Customer ID" id="txtcid">
+          </div>
+          <button class="btn widget uib_w_3 btn-default d-margins" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnproceed">Proceed</button>
+          <button class="btn widget uib_w_4 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Exit</button>
+        </div>
+      </div>
+    </div>
+    <div class="upage hidden" id="Details">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_5" data-uib="layout/header" data-ver="0">
+          <h2>Details</h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left"></div>
+      </div>
+    </div>
+  </body>
+
+</html>

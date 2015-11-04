@@ -1,0 +1,6 @@
+.ui-flipswitch .ui-btn.ui-flipswitch-on {
+  text-indent: -2.6em;
+}
+.ui-flipswitch .ui-flipswitch-off {
+  text-indent: 1em;
+}
